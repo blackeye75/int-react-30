@@ -1,34 +1,39 @@
 import React, { useState } from "react";
 
 const Eight = () => {
-  const [input, setinput] = useState("");
   const [todos, setTodos] = useState([]);
-  const addTodo = () => {
+  const [input, setinput] = useState("");
+
+  const addTodos = () => {
     if (input.trim() !== "") {
       setTodos([...todos, input]);
-      setinput("");
     }
+    setinput("");
   };
-  const removeTodo = (index) => {
-    const updateTodo = todos.filter((_, i) => i !== index);
-    setTodos(updateTodo);
+
+  const removeTodos = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
   };
+  console.log(todos);
+
   return (
     <div>
       <input
         type="text"
-        onChange={(e) => {
-          setinput(e.target.value);
-        }}
+        name=""
+        id=""
+        onChange={(e) => setinput(e.target.value)}
         value={input}
       />
-      <p>Input:{input}</p>
-      <button onClick={addTodo}>Add</button>
+      <p>input : {input}</p>
+      <button onClick={addTodos}>Add Todos</button>
       <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>
-            {todo} <button onClick={() => removeTodo(index)}>Remove</button>{" "}
-          </li>
+        {todos.map((elem, index) => (
+          <div key={index}>
+            {" "}
+            <li>{elem}</li>
+            <button onClick={()=>removeTodos(index)}>Remove Todo</button>
+          </div>
         ))}
       </ul>
     </div>

@@ -10,6 +10,7 @@ import Five from "./ques/Five";
 import Six from "./ques/Six";
 import Seven from "./ques/Seven";
 import Eight from "./ques/Eight";
+import Nine from "./ques/Nine";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         {/* <Five/> */}
         {/* <Six /> */}
         {/* <Seven/> */}
-        <Eight/>
+        {/* <Eight/> */}
+        <Nine />
       </div>
     </>
   );
