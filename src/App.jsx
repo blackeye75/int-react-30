@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import One from "./ques/One";
 import Two from "./ques/Two";
@@ -11,6 +9,8 @@ import Six from "./ques/Six";
 import Seven from "./ques/Seven";
 import Eight from "./ques/Eight";
 import Nine from "./ques/Nine";
+import Ten from "./ques/Ten";
+import Eleven from "./ques/Eleven";
 
 function App() {
   return (
@@ -24,7 +24,9 @@ function App() {
         {/* <Six /> */}
         {/* <Seven/> */}
         {/* <Eight/> */}
-        <Nine />
+        {/* <Nine /> */}
+        {/* <Ten /> */}
+        <Eleven />
       </div>
     </>
   );
